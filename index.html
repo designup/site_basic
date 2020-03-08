@@ -3,7 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title><? include('inc/title.html'); ?></title>
+<title>사이트 기본 레이아웃</title>
+<meta name="description" content="사이트 기본 레이아웃입니다." />
+<meta name="keywords" content="html,사이트레이아웃,깃허브" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="사이트 기본 레이아웃" />
+<meta property="og:description" content="사이트 기본 레이아웃입니다." />
+<meta property="og:image" content="http://이미지경로" />
+<meta property="og:url" content="https://designup.github.io/site_basic/" />
+<meta name="Robots" content="INDEX, FOLLOW" />
 <link href="css/index_layout.css" rel="stylesheet" type="text/css" />
 <link href="css/global.css" rel="stylesheet" type="text/css" />
 <link href="css/layout.css" rel="stylesheet" type="text/css" />
@@ -229,22 +237,22 @@ $(function(){
 
 
 
-<section class="wrap_content" style="margin-top:50px;">
-    <div class="bbs_notice">
+<section class="wrap-content" style="margin-top:50px;">
+    <div class="bbs-notice">
         <div class="title">공지사항</div>
-        <div class="content list_latest_bbs "> 
+        <div class="content list-latest_bbs "> 
             
             
         </div>
     </div>
-    <div class="bbs_gallery" style="margin-left:20px;">
+    <div class="bbs-gallery" style="margin-left:20px;">
       <div class="title">갤러리</div>
         <div class="content list_latest_gallery"> 
             
            
         </div>
     </div>
-    <div class="box_login" style="margin-left:20px;">
+    <div class="box-login" style="margin-left:20px;">
        
     </div>
 </section>
@@ -253,7 +261,20 @@ $(function(){
 	
 <!--footer -->
 <footer>
-    <? include "inc/footer.html" ; ?>
+
+    
+    <div class="wrap">
+        <div class="address">
+            서울시 성동구 동일로 123번지 smt빌딩 2층 이즈오피스 A208호
+&nbsp;<br>사업자등록번호 : 101-02-71267 &nbsp; 계좌 : 국민은행 546901-01-073018 &nbsp; &nbsp;예금주 : 미래시스템 
+&nbsp;<br>Copyright 2017 web25.co.kr All Rights Reserved.&nbsp;&nbsp;<a href="#" onclick="window.open('/pop_privacy.html','pop','resizable=no top=5 left=5 width=520 height=760 scrollbars=yes');return false">
+
+<strong style="color:#CC3300">[개인정보취급방침]</strong></a>
+        </div>
+        <div class="logo"><img src="images/logo_footer.png"></div>
+    </div>
+
+
 </footer>
 <!--//footer -->
 

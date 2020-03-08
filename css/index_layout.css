@@ -3,15 +3,15 @@
 /*기본코드*/
 body.bg { background:url(../images/bg_main2.jpg) top center repeat-x;}
 .visual{ width:100%; overflow:hidden; }
-.wrap_content{ width:1140px; overflow: hidden; margin: 0 auto; }
+.wrap-content{ width:1140px; overflow: hidden; margin: 0 auto; }
 
 
 
 /* 하단코드는 불필요시 삭제가능 */
 
 /*메인게시판 레이아웃*/
-.bbs_notice{ float:left;  width:290px; }
-.bbs_notice > .title{border-bottom:2px #3c3c3c solid;overflow:hidden;}
+.bbs-notice{ float:left;  width:290px; }
+.bbs-notice > .title{border-bottom:2px #3c3c3c solid;overflow:hidden;}
 #bbsTab {float:left;  overflow:hidden;}
 #bbsTab li {border-top:2px #bdbdbd solid;letter-spacing:-1px; margin-right:5px; padding:0 5px; color:#5d5d5d; font-size:14px; line-height:30px;float:left;  overflow:hidden;  font-weight:bold; cursor:pointer;  }
 #bbsTab li.on {border-top:2px #004592 solid;color:#004592; }
@@ -21,16 +21,16 @@ body.bg { background:url(../images/bg_main2.jpg) top center repeat-x;}
 .bbs_gallery > .content{float:left; width:100%; margin-top:7px;  overflow:hidden;}
 
 /*일반게시판 리스트*/
-.list_latest_bbs li { line-height:22px;height:22px;overflow:hidden; background: url(../images/dot_title2.png) no-repeat 0 8px ;}
-.list_latest_bbs li .title { color:#2a2a2a; padding-left:5px; overflow:hidden; }
-.list_latest_bbs li img {display:none;}
-.list_latest_bbs li .text {display:none;}
-.list_latest_bbs li .date {display:none;}
+.list-latest_bbs li { line-height:22px;height:22px;overflow:hidden; background: url(../images/dot_title2.png) no-repeat 0 8px ;}
+.list-latest_bbs li .title { color:#2a2a2a; padding-left:5px; overflow:hidden; }
+.list-latest_bbs li img {display:none;}
+.list-latest_bbs li .text {display:none;}
+.list-latest_bbs li .date {display:none;}
 
 /*갤러리게시판 리스트*/
-.list_latest_gallery li { width:120px; float:left; margin:10px 4px;  }
-.list_latest_gallery li .img img { width:120px; height:90px;   }
-.list_latest_gallery li .caption { width:120px; height:15px; margin-top:5px; overflow:hidden; text-align:center  }
+.list-latest_gallery li { width:120px; float:left; margin:10px 4px;  }
+.list-latest_gallery li .img img { width:120px; height:90px;   }
+.list-latest_gallery li .caption { width:120px; height:15px; margin-top:5px; overflow:hidden; text-align:center  }
 
 /*제품게시판 리스트*/
 .productList { margin-top:44px; overflow: hidden; }
