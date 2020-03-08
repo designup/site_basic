@@ -22,34 +22,17 @@
 
 
 <!--header -->
-{% include inc/header.html %}
 <header>
     <div class="wrap">
-        <div class="notice">새글알림: 질문게시판(3) 온라인접수(1)</div>
-        <div class="logo"><a href="index.html"><img src="images/logo.png" class="disblock" /></a></div>
+        <div class="logo"><a href="index.html"><img src="images/logo.png"  /></a></div>
         <nav id="gnb">
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <?
-      if($GLOBALS['ss_index'])
-      {
-    ?>
-                <li><a href="<?=$GLOBALS['_DD']['http_wmaker']?>/_office/fc_proc.php?proc_code=logout&amp;http_rtn=/">로그아웃</a></li>
-                <li><a href="mypage.html">정보수정</a></li>
-                <?
-      }
-      else
-      {
-    ?>
-                <li><a href="login.html">로그인</a></li>
-                <li><a href="join.html">회원가입</a></li>
-                <?
-      }
-    ?>
-                <li><a href="/admin/" target="_blank">ADMIN</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
             </ul>
         </nav>
-        <script type="text/javascript">
+        <script>
 	
 $(document).ready(function () {	
 	
