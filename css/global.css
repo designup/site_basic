@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+
+html, body, input, select, form, ul,dl,dt,dd, li, div, p, h1, h2, h3, h5, h6, p, span, fieldset { border:0; margin:0; padding:0; }
+ol { border:0; margin:0;  padding-left:28px;  }
+ul, ul>li {list-style:none;}
+li img { vertical-align:top;}
+
+/* A태그 */
+a{ color:#333; text-decoration:none; }
+
+html {font-family: '맑은 고딕', sans-serif ;font-size:0.875rem /*14px*/; line-height:1.7; color:#333;}
+

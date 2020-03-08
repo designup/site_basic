@@ -1,0 +1,18 @@
+
+    <div class="wrap">
+        <div class="address">
+            <?
+            $sFooter = str_replace("\n","&nbsp;<br>", htmlspecialchars( $oScode->xml['footer'] , ENT_QUOTES)) ;
+            $sFooter = str_replace("  "," &nbsp;", $sFooter ) ;        
+            echo $sFooter ;
+            ?>&nbsp;&nbsp;<a  href=# onClick="window.open('/pop_privacy.html','pop','resizable=no top=5 left=5 width=520 height=760 scrollbars=yes');return false" >
+
+<strong style="color:#CC3300">[개인정보취급방침]</strong></a>
+        </div>
+        <div class="logo"><img src="images/logo_footer.png"></div>
+    </div>
+
+<?
+return ;
+?>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title><? include('inc/title.html'); ?></title>
+<script>
+var nav1 = "미래시스템";
+var nav2 = "공지사항";
+var titleText  ="<? include('inc/title.html'); ?> :: " + nav1 + " > " + nav2 ;
+document.getElementsByTagName("title")[0].innerHTML=titleText;
+
+</script>
+<link href="css/sub_layout.css" rel="stylesheet" type="text/css" />
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/bbs.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.7.1.min.js"></script>
+
+</head>
+<body>
+
+<!--header -->
+<header>
+    헤더
+</header>
+
+<!--//header -->
+
+<div class="visual"><img src="images/visual_sub_01.jpg"></div>
+<div id="container"> 
+    
+    <!--wrap_snb -->
+    <nav id="snb">
+       
+			<span id="title"></span>
+            <ul>
+                <? include("inc/nav_bbs.html"); ?>
+            </ul>
+       
+    	    <script>
+			$("#snb li.no1").eq(0).addClass("on");
+			var title = document.getElementById("title");
+			title.innerHTML = nav1;
+		   </script>
+        
+    </nav>
+	
+	<aside class="banner">
+		배너리스트
+	<? include("inc/banner.html"); ?>
+    </aside>
+    <!--//wrap_snb --> 
+    
+    <!--content -->
+    <main role="main">
+        <div class="wrap_title">
+            <h1 id="subtitle"></h1>
+            <div id="map">HOME &gt; <span></span> &gt; <strong><span></span></strong></div>
+           		 <script>
+				 var map1 = document.getElementById("map").getElementsByTagName("span")[0];
+				 var map2 = document.getElementById("map").getElementsByTagName("span")[1];
+				 var map3 = document.getElementById("subtitle");
+				 map1.innerHTML = nav1;
+				 map2.innerHTML = nav2;
+				 map3.innerHTML = nav2;
+				 </script> 
+        </div>
+        <section>
+            <? include "object/bbs_notice.obj.php" ?>
+        </section>
+    </main>
+    
+    <!--//content --> 
+    
+</div>
+
+<!--//container --> 
+
+<!--footer -->
+<div id="footer">
+    <? include("inc/footer.html"); ?>
+</div>
+
+<!--//footer -->
+
+</body>
+</html>

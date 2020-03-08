@@ -1,0 +1,208 @@
+<div class="wrap">
+	
+	<div class="notice">  <?
+    include "inc/newinfocount.inc.html" ;
+    ?></div>
+<div class="logo"><a href="index.html"><img src="images/logo.png" class="disblock" /></a></div>
+<div id="gnb">
+
+	
+	
+	<ul>
+	
+		<li><a href="index.html">HOME</a></li>
+  <?
+      if($GLOBALS['ss_index'])
+      {
+    ?>
+  <li><a href="<?=$GLOBALS['_DD']['http_wmaker']?>/_office/fc_proc.php?proc_code=logout&amp;http_rtn=/">로그아웃</a></li>
+  <li><a href="mypage.html">정보수정</a></li>
+  <?
+      }
+      else
+      {
+    ?>
+  <li><a href="login.html">로그인</a></li>
+  <li><a href="join.html">회원가입</a></li>
+  <?
+      }
+    ?>
+    
+    
+    
+    <li><a href="/admin/" target="_blank">ADMIN</a></li>
+  </ul>
+
+
+
+
+
+
+
+</div>
+
+	<script type="text/javascript">
+	
+$(document).ready(function () {	
+	
+	$('#lnb li').hover(
+	
+		function () {
+			//show its submenu
+			$('ul', this).slideDown(100);
+
+		}, 
+		function () {
+			//hide its submenu
+			$('ul', this).slideUp(100);			
+		}
+	);
+	
+});
+	</script>
+	<style type="text/css">
+	
+	/* remove the list style */
+	#lnb {
+		margin:0; 
+		padding:0; 
+		list-style:none;
+	}	
+	
+		/* make the LI display inline */
+		/* it's position relative so that position absolute */
+		/* can be used in submenu */
+		#lnb > li {
+			float:left; 
+			display:block; 
+			width:114px; 
+			position:relative;
+			z-index:500; 
+			margin:0 1px;
+		}
+		
+		/* this is the parent menu */
+		#lnb li a {
+			display:block; 
+			padding:5px 0px 0 0px; 
+			font-weight:700;  
+			height:23px; 
+			text-decoration:none; 
+			 font-family: '맑은 고딕'; font-weight:bold;  font-size:15px; color:#212121;
+			text-align:center; 
+			
+		}
+
+		#lnb li a:hover {
+			color:#0051b5;
+		}
+	
+		/* you can make a different style for default selected value */
+		#lnb a.selected {
+			color:#0051b5;
+		}
+	
+		/* submenu, it's hidden by default */
+		#lnb ul {
+			position:absolute; 
+			left:0; 
+			display:none; 
+			margin:0 0 0 -1px; 
+			padding:0; 
+			list-style:none;
+			
+		}
+		
+		#lnb ul > li {
+			 
+			width:163px;
+			border-top:1px solid #fff; background-color:#eff4f7;
+		}
+		
+		#lnb ul li > a {
+			display:block; 
+			padding:0 0 0 10px;; 
+			width:128px;
+			line-height:35px; 
+			height:35px;
+			text-decoration:none; 
+			color:#333; 
+			text-align:left; font-size:12px; 
+		}
+
+	</style>
+	<ul id="lnb">
+		<li><a href="notice.html">게시판</a>
+			<ul>
+				<? include("inc/nav_bbs.html"); ?>
+			</ul>
+			<div class="clear"></div>
+		</li>
+		<li><a href="layout_01.html">레이아웃</a>
+			<ul>
+				<li><a href="layout_01.html">기본단계구조</a></li>
+
+			</ul>
+			<div class="clear"></div>
+		</li>
+		<li><a href="tabmenu_01.html">탭메뉴</a>
+			<ul>
+				<li><a href="tabmenu_01.html">탭메뉴</a></li>
+
+			</ul>
+			<div class="clear"></div>
+		</li>
+		
+        
+        
+        <li><a href="list.html?area_code=01">제품소개</a>
+			<ul>
+				<?php
+        /* 제일 상단의 카테고리 리스트 */
+        $sSareatopmenu = "select * 
+                            from shoparea
+                           where shoparea.shop_id = 'mainshop'
+                             and shoparea.up_code = ''
+                           order by shoparea.list_no" ;
+        $rSareatopmenu = DB_result($sSareatopmenu) ;
+        $iSareatopmenu = DB_rowcount($rSareatopmenu) ;
+        for($i = 0; $i < $iSareatopmenu; $i ++ )
+        {
+            $aSareatopmenu = DB_onerow($rSareatopmenu, $i) ;
+        ?>
+		<li><a href="list.html?area_code=<?=$aSareatopmenu['area_code']?>"><?=$aSareatopmenu['area_title']?></a><div class="clear"></div></li>
+        <?
+        }
+        ?>
+
+			</ul>
+			<div class="clear"></div>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+		<li><a href="movie.html">자료실</a>
+			<ul>
+				<li><a href="movie.html">동영상 자료실</a></li>
+				<li><a href="gallery_1.html">사진 자료실</a></li>
+				<li><a href="data_01.html?actobj=board&bbs_code=docu">문서 자료실</a></li>
+				<li><a href="data_03.html?actobj=board&bbs_code=sketch">도면 자료실</a></li>
+			</ul>
+			<div class="clear"></div>
+		</li>
+		<li><a href="online_01.html">온라인문의</a>
+			<ul>
+				<li><a href="online_01.html">실시간상담</a></li>
+				<li><a href="commu_01.html?actobj=board&bbs_code=notice">공지사항</a></li>
+				<li><a href="commu_02.html?actobj=board&bbs_code=board">고객게시판</a></li>
+			</ul>
+			<div class="clear"></div>
+		</li>
+	</ul>
+
+
+</div>
