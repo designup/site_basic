@@ -1,265 +1,250 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>사이트 기본 레이아웃</title>
-<meta name="description" content="사이트 기본 레이아웃입니다." />
-<meta name="keywords" content="html,사이트레이아웃,깃허브" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="사이트 기본 레이아웃" />
-<meta property="og:description" content="사이트 기본 레이아웃입니다." />
-<meta property="og:image" content="http://이미지경로" />
-<meta property="og:url" content="https://designup.github.io/site_basic/" />
-<meta name="Robots" content="INDEX, FOLLOW" />
-<link href="css/index_layout.css" rel="stylesheet" type="text/css" />
-<link href="css/global.css" rel="stylesheet" type="text/css" />
-<link href="css/layout.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery-1.7.1.min.js"></script>
-<script src="js/slides.min.jquery.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>사이트 기본 레이아웃</title>
+    <meta name="description" content="사이트 기본 레이아웃입니다." />
+    <meta name="keywords" content="html,사이트레이아웃,깃허브" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="사이트 기본 레이아웃" />
+    <meta property="og:description" content="사이트 기본 레이아웃입니다." />
+    <meta property="og:image" content="http://이미지경로" />
+    <meta property="og:url" content="https://designup.github.io/site_basic/" />
+    <meta name="Robots" content="INDEX, FOLLOW" />
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="css/index_layout.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/slides.min.jquery.js"></script>
 </head>
+
 <body>
 
-
-<!--header -->
-<header>
-    <div class="wrap">
-        <div class="logo"><a href="index.html"><img src="images/logo.png"  /></a></div>
-        <nav id="gnb">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">회원가입</a></li>
-            </ul>
-        </nav>
-        <script>
-	
-$(document).ready(function () {	
-	
-	$('#lnb li').hover(
-	
-		function () {
-			//show its submenu
-			$('ul', this).slideDown(100);
-
-		}, 
-		function () {
-			//hide its submenu
-			$('ul', this).slideUp(100);			
-		}
-	);
-	
-});
-	</script>
-        <style type="text/css">
-	
-	/* remove the list style */
-	#lnb ul {
-		margin:0; 
-		padding:0; 
-		list-style:none;
-	}	
-	
-		/* make the LI display inline */
-		/* it's position relative so that position absolute */
-		/* can be used in submenu */
-		#lnb > ul > li {
-			float:left; 
-			display:block; 
-			width:114px; 
-			position:relative;
-			z-index:500; 
-			margin:0 1px;
-		}
-		
-		/* this is the parent menu */
-		#lnb li a {
-			display:block; 
-			padding:5px 0px 0 0px; 
-			font-weight:700;  
-			height:23px; 
-			text-decoration:none; 
-			 font-family: '맑은 고딕'; font-weight:bold;  font-size:15px; color:#212121;
-			text-align:center; 
-			
-		}
-
-		#lnb li a:hover {
-			color:#0051b5;
-		}
-	
-		/* you can make a different style for default selected value */
-		#lnb a.selected {
-			color:#0051b5;
-		}
-	
-		/* submenu, it's hidden by default */
-		#lnb ul ul {
-			position:absolute; 
-			left:0; 
-			display:none; 
-			margin:0 0 0 -1px; 
-			padding:0; 
-			list-style:none;
-			
-		}
-		
-		#lnb ul ul > li {
-			 
-			width:163px;
-			border-top:1px solid #fff; background-color:#eff4f7;
-		}
-		
-		#lnb ul ul li > a {
-			display:block; 
-			padding:0 0 0 10px;; 
-			width:128px;
-			line-height:35px; 
-			height:35px;
-			text-decoration:none; 
-			color:#333; 
-			text-align:left; font-size:12px; 
-		}
-
-	</style>
-        <nav id="lnb">
-		<ul>
-            <li><a href="notice.html">게시판</a>
+    <!--header -->
+    <header>
+        <div class="wrap">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+            <nav id="gnb">
                 <ul>
-                    <? include("inc/nav_bbs.html"); ?>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
                 </ul>
-                <div class="clear"></div>
-            </li>
-            <li><a href="layout_01.html">레이아웃</a>
-                <ul>
-                    <li><a href="layout_01.html">기본단계구조</a></li>
-                </ul>
-                <div class="clear"></div>
-            </li>
-            <li><a href="tabmenu_01.html">탭메뉴</a>
-                <ul>
-                    <li><a href="tabmenu_01.html">탭메뉴</a></li>
-                </ul>
-                <div class="clear"></div>
-            </li>
-            <li><a href="movie.html">자료실</a>
-                <ul>
-                    <li><a href="movie.html">동영상 자료실</a></li>
-                    <li><a href="gallery_1.html">사진 자료실</a></li>
-                    <li><a href="data_01.html?actobj=board&bbs_code=docu">문서 자료실</a></li>
-                    <li><a href="data_03.html?actobj=board&bbs_code=sketch">도면 자료실</a></li>
-                </ul>
-                <div class="clear"></div>
-            </li>
-            <li><a href="online_01.html">온라인문의</a>
-                <ul>
-                    <li><a href="online_01.html">실시간상담</a></li>
-                    <li><a href="commu_01.html?actobj=board&bbs_code=notice">공지사항</a></li>
-                    <li><a href="commu_02.html?actobj=board&bbs_code=board">고객게시판</a></li>
-                </ul>
-                <div class="clear"></div>
-            </li>
-        </ul>
-		</nav>
-    </div>
-</header>
-
-<!--//header -->
-	
-	
-	
-<main role="main">
-
-<div class="visual">
-    <style>
-.slides{position:relative;width:100%}
-.slides .slide{overflow:hidden;position:relative;width:100%;height:499px}
-.slides .slide li{display:block;width:100%;height:499px}
-.slides .slide li a{display:block}
-.slides a.prev,.slides a.next{display:inline-block;z-index:100;overflow:hidden;position:absolute;top:10px;width:40px;height:80px;background:url(images/sp_page2.png) 0 0 no-repeat;line-height:999px;vertical-align:top}
-.slides a.prev{left:50%; top:230px; margin-left:-600px;background-position:0 0}
-.slides a.prev:hover{background-position:0 -80px}
-.slides a.next{left:50%; top:230px; margin-left:560px;width:40px;background-position:-40px 0}
-.slides a.next:hover{background-position:-40px -80px}
-.slides .page{z-index:100;position:absolute;top:300px;left:50%; margin-left:-495px;list-style:none}
-.slides .page li{display:inline-block;_display:inline;margin:0 1px;_zoom:1}
-.slides .page li a{display:block;overflow:hidden;width:12px;height:12px;background:url(images/sp_page.png) 0 0 no-repeat;line-height:999px;vertical-align:top}
-.slides .page li.current a{background-position:0 -12px}
-</style>
-    <div id="slides" class="slides">
-        <ul class="slide">
-            <li style="background:url(http://sav279.web25.kr/images/main_01.jpg) center no-repeat;height:393px "> </li>
-            <li style="background:url(http://sav279.web25.kr/images/main_02.jpg) center no-repeat;height:393px "> </li>
-        </ul>
-    </div>
-    <script>
-
-$(function(){
-	var startSlide = 1;
-	$('#slides').slides({
-		container: 'slide',
-		pagination: true,
-		generateNextPrev: true,
-		next: 'next',
-		prev: 'prev',
-		generatePagination: true,
-		paginationClass: 'page',
-		start: 1,
-		effect: 'fade',
-		slideSpeed: 350,
-		play: 6000,
-		pause: 1,
-		start: startSlide
-	});
-
-});
-</script> 
-</div>
-
-<!--content --> 
-
-
-
-<section class="wrap-content" style="margin-top:50px;">
-    <div class="bbs-notice">
-        <div class="title">공지사항</div>
-        <div class="content list-latest_bbs "> 
-            
-            
-        </div>
-    </div>
-    <div class="bbs-gallery" style="margin-left:20px;">
-      <div class="title">갤러리</div>
-        <div class="content list_latest_gallery"> 
-            
+            </nav>
            
+           
+            <nav id="lnb">
+                <ul>
+                    <li><a href="notice.html">게시판</a>
+                        <ul>
+                            <li><a href="online_01.html">실시간상담</a></li>
+                            <li><a href="commu_01.html?actobj=board&bbs_code=notice">공지사항</a></li>
+                            <li><a href="commu_02.html?actobj=board&bbs_code=board">고객게시판</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </li>
+                    <li><a href="layout_01.html">레이아웃</a>
+                        <ul>
+                            <li><a href="layout_01.html">기본단계구조</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </li>
+                    <li><a href="tabmenu_01.html">탭메뉴</a>
+                        <ul>
+                            <li><a href="tabmenu_01.html">탭메뉴</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </li>
+                    <li><a href="movie.html">자료실</a>
+                        <ul>
+                            <li><a href="movie.html">동영상 자료실</a></li>
+                            <li><a href="gallery_1.html">사진 자료실</a></li>
+                            <li><a href="data_01.html?actobj=board&bbs_code=docu">문서 자료실</a></li>
+                            <li><a href="data_03.html?actobj=board&bbs_code=sketch">도면 자료실</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </li>
+                    <li><a href="online_01.html">온라인문의</a>
+                        <ul>
+                            <li><a href="online_01.html">실시간상담</a></li>
+                            <li><a href="commu_01.html?actobj=board&bbs_code=notice">공지사항</a></li>
+                            <li><a href="commu_02.html?actobj=board&bbs_code=board">고객게시판</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </li>
+                </ul>
+            </nav>
+            
+            
+             <script>
+            
+                var nav1depthItem = document.querySelector('#lnb');
+                
+                nav1depthItem.addEventListener('mouseover',function(e){
+                    var nav2depthBar = e.target.nextElementSibling;
+                    nav2depthBar.classList.add('show');
+                })
+           
+                
+                
+                   
+
+               
+                
+            </script>
         </div>
-    </div>
-    <div class="box-login" style="margin-left:20px;">
-       
-    </div>
-</section>
+    </header>
 
-</main>	
-	
-<!--footer -->
-<footer>
+    <!--//header -->
 
-    
-    <div class="wrap">
-        <div class="address">
-            서울시 성동구 동일로 123번지 smt빌딩 2층 이즈오피스 A208호
-&nbsp;<br>사업자등록번호 : 101-02-71267 &nbsp; 계좌 : 국민은행 546901-01-073018 &nbsp; &nbsp;예금주 : 미래시스템 
-&nbsp;<br>Copyright 2017 web25.co.kr All Rights Reserved.&nbsp;&nbsp;<a href="#" onclick="window.open('/pop_privacy.html','pop','resizable=no top=5 left=5 width=520 height=760 scrollbars=yes');return false">
+    <main role="main">
+        <div class="visual">
+            <style>
+                .slides {
+                    position: relative;
+                    width: 100%
+                }
 
-<strong style="color:#CC3300">[개인정보취급방침]</strong></a>
+                .slides .slide {
+                    overflow: hidden;
+                    position: relative;
+                    width: 100%;
+                    height: 499px
+                }
+
+                .slides .slide li {
+                    display: block;
+                    width: 100%;
+                    height: 499px
+                }
+
+                .slides .slide li a {
+                    display: block
+                }
+
+                .slides a.prev,
+                .slides a.next {
+                    display: inline-block;
+                    z-index: 100;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 10px;
+                    width: 40px;
+                    height: 80px;
+                    background: url(images/sp_page2.png) 0 0 no-repeat;
+                    line-height: 999px;
+                    vertical-align: top
+                }
+
+                .slides a.prev {
+                    left: 50%;
+                    top: 230px;
+                    margin-left: -600px;
+                    background-position: 0 0
+                }
+
+                .slides a.prev:hover {
+                    background-position: 0 -80px
+                }
+
+                .slides a.next {
+                    left: 50%;
+                    top: 230px;
+                    margin-left: 560px;
+                    width: 40px;
+                    background-position: -40px 0
+                }
+
+                .slides a.next:hover {
+                    background-position: -40px -80px
+                }
+
+                .slides .page {
+                    z-index: 100;
+                    position: absolute;
+                    top: 300px;
+                    left: 50%;
+                    margin-left: -495px;
+                    list-style: none
+                }
+
+                .slides .page li {
+                    display: inline-block;
+                    _display: inline;
+                    margin: 0 1px;
+                    _zoom: 1
+                }
+
+                .slides .page li a {
+                    display: block;
+                    overflow: hidden;
+                    width: 12px;
+                    height: 12px;
+                    background: url(images/sp_page.png) 0 0 no-repeat;
+                    line-height: 999px;
+                    vertical-align: top
+                }
+
+                .slides .page li.current a {
+                    background-position: 0 -12px
+                }
+            </style>
+            <div id="slides" class="slides">
+                <ul class="slide">
+                    <li style="background:url(http://sav279.web25.kr/images/main_01.jpg) center no-repeat;height:393px "> </li>
+                    <li style="background:url(http://sav279.web25.kr/images/main_02.jpg) center no-repeat;height:393px "> </li>
+                </ul>
+            </div>
+            <script>
+                $(function() {
+                    var startSlide = 1;
+                    $('#slides').slides({
+                        container: 'slide',
+                        pagination: true,
+                        generateNextPrev: true,
+                        next: 'next',
+                        prev: 'prev',
+                        generatePagination: true,
+                        paginationClass: 'page',
+                        start: 1,
+                        effect: 'fade',
+                        slideSpeed: 350,
+                        play: 6000,
+                        pause: 1,
+                        start: startSlide
+                    });
+
+                });
+            </script>
         </div>
-        <div class="logo"><img src="images/logo_footer.png"></div>
-    </div>
 
+        <!--content -->
 
-</footer>
-<!--//footer -->
+        <section class="wrap-content" style="margin-top:50px;">
+            <div class="bbs-notice">
+                <div class="title">공지사항</div>
+                <div class="content list-latest_bbs "> </div>
+            </div>
+            <div class="bbs-gallery" style="margin-left:20px;">
+                <div class="title">갤러리</div>
+                <div class="content list_latest_gallery"> </div>
+            </div>
+            <div class="box-login" style="margin-left:20px;"> </div>
+        </section>
+    </main>
 
-</body>
-</html>
+    <!--footer -->
+    <footer>
+        <div class="wrap">
+            <div class="address"> 서울시 성동구 동일로 123번지 smt빌딩 2층 이즈오피스 A208호
+                &nbsp;<br>
+                사업자등록번호 : 101-02-71267 &nbsp; 계좌 : 국민은행 546901-01-073018 &nbsp; &nbsp;예금주 : 미래시스템
+                &nbsp;<br>
+                Copyright 2017 web25.co.kr All Rights Reserved.&nbsp;&nbsp;<a href="#" onclick="window.open('/pop_privacy.html','pop','resizable=no top=5 left=5 width=520 height=760 scrollbars=yes');return false"> <strong style="color:#CC3300">[개인정보취급방침]</strong></a> </div>
+            <div class="logo"><img src="images/logo_footer.png"></div>
+        </div>
+    </footer>
+    <!--//footer -->
+
+</body></html>
