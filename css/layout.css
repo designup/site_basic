@@ -54,19 +54,23 @@ header > .wrap > .logo {
     left: 200px;
     z-index: 999;
     width: 880px;
+    background: #ccc;
+    
 }
 
 #lnb ul {
-    display: flex;
+    display: flex; 
+    
 }
 
 #lnb > ul > li {
     width: 100px;
+    position: relative;
 }
 
 
 #lnb li a {
-    display: block;
+    display: ;
     padding: 0px;
     font-weight: bold;
     height: 30px;
@@ -95,7 +99,7 @@ header > .wrap > .logo {
     
 
 }
-#lnb ul ul.show{
+#lnb > ul > li:hover ul{
     display: block;
 }
 
